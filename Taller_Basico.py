@@ -10,14 +10,33 @@ edad = año_actual - año_nacimiento
 print (f"hola { nombre} tu edad es {edad} años")
 
 
-
-num1 = int(input("ingresa el primer numero"))
-
-num2 = int(input("ingresa el segundo numero"))
+#pedir al usuario el primer numero
+num1 = int(input("ingresa el primer numero: "))
+#pedir al usuario el segundo numero
+num2 = int(input("ingresa el segundo numero: "))
+#calcular la suma de ambos numeros
 suma = num1 + num2
+#mostrar el resultado de la suma
 print (f"la suma de, {num1} y {num2} es: {suma} ")
 
 
+#pedir la base de triangulo al usuario
+base = float(input("introduce la base del triangulo en metros: "))
+#pedir al usuario la altura de triangulo
+altura = float(input("introduce la altura del triangulo en metros: "))
+#calcular el area del triangulo
+area = (base * altura) / 2
+#mostrar el resultado al usuario
+print (f"el area del trianfulo es igual a {area} m")
+
+
+
+#pedir al usuario que ingrese la temperatura a grados celsius
+celsius = float(input("introduce la temperatura en grados celsius: "))
+#calcular la temperatura en farenheit
+farenheit = (celsius * 9/5) + 32
+#mostrar el resultado
+print(f"{celsius} equivale a {farenheit} grados farenheit")
 
 
 
