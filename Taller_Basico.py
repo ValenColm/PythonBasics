@@ -42,7 +42,13 @@ print(f"{celsius} equivale a {farenheit} grados farenheit")
 print(type(celsius), type(num1), type(nombre), type(base), type(altura))
 
 
-edad_actual = (int("ingresa tu edad actual: "))
+edad_actual = int(input("ingresa tu edad actual: " ))
 edad_furura = edad_actual + 10
 print (f"en 10 años tendras {edad_furura}años:")
 
+
+#Verificar si es mayor o menor de edad
+if edad >= 18:
+    print("Eres mayor de edad.")
+else:
+    print("Eres menor de edad.")
