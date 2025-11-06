@@ -38,5 +38,11 @@ farenheit = (celsius * 9/5) + 32
 #mostrar el resultado
 print(f"{celsius} equivale a {farenheit} grados farenheit")
 
+#consulta los tipos de variables usados anteriormente
+print(type(celsius), type(num1), type(nombre), type(base), type(altura))
 
+
+edad_actual = (int("ingresa tu edad actual: "))
+edad_furura = edad_actual + 10
+print (f"en 10 años tendras {edad_furura}años:")
 
