@@ -16,3 +16,14 @@ if price.isdigit() and quantity.isdigit():
 #Mostrar un mensaje de error, si los valores ingresados son invalidos.
 else:
     print("Error: Ingresa solo números válidos para precio y cantidad.")
+
+
+
+
+
+print( 13 + 10 )
+print(19 +20 )
+print(40 + 30 )
+print( 4 + 5)
+print( 38 + 45)
+print( 35 + 35)
