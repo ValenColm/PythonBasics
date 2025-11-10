@@ -212,41 +212,45 @@ elif(opcion == 14):
         print(f"{numero} * {i} = {resultado}")
 
 elif(opcion == 15):
-#pedir al usuario el numero desde le cual desea iniciar la cuenta regresiva
-    inicio = int(input("ingresa el numero desde el cual inicia la cuenta regresiva"))
-#repetir mientras el numero sea mayor o igual a cero
-    while inicio >= 0:
-        #mostar el numero actual      
-        print("inicio")
-        #restar 1 al valor del inicio en cada iteracion
-        inicio -= 1
-        #mensaje final cundo termina la cuenta    
-        print("!iniciar¡")
+# Pedir al usuario el número desde el cual desea iniciar la cuenta regresiva
+   inicio = int(input("Ingresa el número desde el cual inicia la cuenta regresiva: "))
+
+# Repetir mientras el número sea mayor o igual a cero
+   while inicio >= 0:
+    # Mostrar el número actual
+      print(inicio)
+    
+    # Restar 1 al valor del inicio en cada iteración
+      inicio -= 1
+
+# Mensaje final cuando termina la cuenta    
+      print("¡Iniciar!")
 
 elif(opcion == 16): 
-#generar un numero aleatorio entre 1 y 10
+        #generar un numero aleatorio entre 1 y 10
     numero_secreto = random.randint (1 ,10)
-#inicializar una variable para guardar el intento del usuario
+                    #inicializar una variable para guardar el intento del usuario
     intento = 0
-#repetir mientras el usuario no adivine el numero
+                #repetir mientras el usuario no adivine el numero
     while intento != numero_secreto: 
-#pedir al usuario que ingrese un numero
-        intento = int(input("adivina el numero entre (1 y 10): ") )
-#comprobar si el numero es correcto
-        if intento < numero_secreto:
-            print("demasiado bajo, intenta de nuevo")
-        elif intento > numero_secreto:
-            print("demasiado alto, intentalo de nuevo")
-        else :
-            print("correcto, adivinaste el nuemro")
+                #pedir al usuario que ingrese un numero
+            intento = int(input("adivina el numero entre (1 y 10): ") )
+            #comprobar si el numero es correcto
+                    
+            if intento < numero_secreto:
+                        print("demasiado bajo, intenta de nuevo")
+            elif intento > numero_secreto:
+                        print("demasiado alto, intentalo de nuevo")
+            else :
+                        print("correcto, adivinaste el nuemro")
 
 
 elif(opcion == 17):
-  suma= 0
+    suma= 0
 #pedir al usuario el primer numero
-  numero = float(input("ingresa un numero (0 para terminar): "))
+    numero = float(input("ingresa un numero (0 para terminar): "))
 #repetir mientras el numero no sea 0
-  while numero != 0:
+    while numero != 0:
 #acumular el valor ingresado en la variable suma
       suma += numero
 #pedir otro numero al usuario
