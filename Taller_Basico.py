@@ -4,41 +4,43 @@ print()
 print("="*94)
 print(f"Bienvenido al Sistema, {nombre} ingresa un numero entre 1 a 30 para iniciar el programa deseado: ")
 print("="*94)
-opcion = int(input("""
-    1-Hola usuario: saluda al usuario con su nombre y edad.
-    2-Suma de dos números.
-    3-Calculo de Área de un triángulo.
-    4-Conversor de grados Celsius a Fahrenheit.
-    5-Tipo de dato: usar type() para mostrar el tipo de variables usadas anteriormente.
-    6-Verifica si el usuario es mayor de edad y calcula su edad y cuanto tendra en 10 años.
-    7-Verifica si el numero es negativo o positivo
-    8-Par o impar.
-    9-Calculadora básica con +, -, *, /.
-    10-Clasificador de notas (Excelente, Aprobado, Reprobado).
-    11-Comparador de tres números: mayor y menor.
-    12-Contar del 1 al 10.
-    13-Sumatoria del 1 al n.
-    14-Tabla de multiplicar.
-    15-Contador regresivo con while.
-    16-Adivina el número (usar random).
-    17-Sumar hasta que el usuario escriba
-    18- Lista de frutas.
-    19-Agregar y eliminar frutas.
-    20-Buscar un elemento en la lista.
-    21-Lista de números y promedio.
-    22-Números pares: guardar solo los pares.
-    23-Eliminar duplicados.  
-    24-Sistema de calificaciones.
-    25-Carrito de compras.
-    26-Cajero automático.
-    27-Gestión de estudiantes (mini base de datos).
-    28-Calculadora avanzada (usar funciones).
-    29-Agenda de contactos (lista de diccionarios).                      
+while True:
+    try:
+        opcion = int(input("""
+        1-Hola usuario: saluda al usuario con su nombre y edad.
+        2-Suma de dos números.
+        3-Calculo de Área de un triángulo.
+        4-Conversor de grados Celsius a Fahrenheit.
+        5-Tipo de dato: usar type() para mostrar el tipo de variables usadas anteriormente.
+        6-Verifica si el usuario es mayor de edad y calcula su edad y cuanto tendra en 10 años.
+        7-Verifica si el numero es negativo o positivo
+        8-Par o impar.
+        9-Calculadora básica con +, -, *, /.
+        10-Clasificador de notas (Excelente, Aprobado, Reprobado).
+        11-Comparador de tres números: mayor y menor.
+        12-Contar del 1 al 10.
+        13-Sumatoria del 1 al n.
+        14-Tabla de multiplicar.
+        15-Contador regresivo con while.
+        16-Adivina el número (usar random).
+        17-Sumar hasta que el usuario escriba
+        18- Lista de frutas.
+        19-Agregar y eliminar frutas.
+        20-Buscar un elemento en la lista.
+        21-Lista de números y promedio.
+        22-Números pares: guardar solo los pares.
+        23-Eliminar duplicados.  
+        24-Sistema de calificaciones.
+        25-Carrito de compras.
+        26-Cajero automático.
+        27-Gestión de estudiantes (mini base de datos).
+        28-Calculadora avanzada (usar funciones).
+        29-Agenda de contactos (lista de diccionarios).
+        Ingresa tu opcion: """))
+        break
+    except ValueError:
+        print("ERROR, POR FAVOR INGRESA UN VALOR VALIDO (NUMEROS ENTEROS)")
 
-	
-
-
-"""))
 if(opcion == 1):
     nombre = input("ingresa tu nombre: ")
     edad = input("Ingresa tu edad: ")
@@ -82,7 +84,7 @@ elif(opcion == 5):
     booleano = True
     #consulta los tipos de variables usados anteriormente
     print(type(texto), type(entero), type(nombre), type(flotante), type(booleano))
- 
+
 elif(opcion == 6):
     #solicita datos para identificar al usuario
     nombre = input("ingresa tu nombre: ")
@@ -173,7 +175,6 @@ elif(opcion == 11):
     print("el numero mayor es {mayor}")
     print("el numero menor es {menor}")
 
-
 elif(opcion == 12) :
 #inicializar una variable con el numero uno
     contador = 1
@@ -183,7 +184,6 @@ elif(opcion == 12) :
         contador +=1
 #mostrar el valor actual del contador
         print(contador)
-   
 
 elif(opcion == 13) :
 #pedir al usuario el numro limite (n)
@@ -199,7 +199,6 @@ elif(opcion == 13) :
         contador += 1
         #mostrar el resultado final
         print(f"la sumatoria de 1 hasta {n} es : {suma}")
-
 
 elif(opcion == 14):
     #pedir al usuario el numero del que desea ver la tabla
@@ -244,7 +243,6 @@ elif(opcion == 16):
             else :
                         print("correcto, adivinaste el nuemro")
 
-
 elif(opcion == 17):
     suma= 0
 #pedir al usuario el primer numero
@@ -265,7 +263,6 @@ elif(opcion == 18):
     for fruta in frutas :
         print (fruta)
 
-
 elif(opcion == 19):
 #lista inicial
   frutas = ["mango","pera","cereza","piña","uva"]
@@ -275,7 +272,6 @@ elif(opcion == 19):
   frutas.remove("uva")
     #mostrar la lista actualizada
   print(frutas)
-
 
 elif(opcion == 20): 
 #lista de fruta
@@ -288,7 +284,6 @@ elif(opcion == 20):
     else:
         print(f"{buscar} no esta en la lista")
 
-
 elif(opcion == 21):
         #crear una lista de nuemros
         numeros = [ 7, 6, 8, 4, 2, 6]
@@ -296,7 +291,6 @@ elif(opcion == 21):
         promedio = sum(numeros) / len(numeros)
         #mostar el resultado
         print(f"el promedionde los numeros es {promedio}")
-
 
 elif(opcion == 22): 
     #crear una lista de numeoro
@@ -307,9 +301,8 @@ elif(opcion == 22):
     #recorrer y agregar los pares
      if n % 2 == 0:
     #mostar los resultados
-       pares.append (n)
+      pares.append (n)
     print(f"numeros pares : {pares}")
-
 
 elif(opcion == 23):
     #Lista con elementos repetidos.
@@ -320,7 +313,6 @@ elif(opcion == 23):
 
     #Mostrar la lista sin duplicados.
     print(f"Lista sin duplicados: {sin_duplicados}")
-
 
 elif(opcion == 24):
         # Lista vacía para guardar notas
@@ -344,7 +336,6 @@ elif(opcion == 24):
     else:
                 print(" Reprobado")
 
-
 elif(opcion == 25):
 
     carrito = []
@@ -362,7 +353,6 @@ elif(opcion == 25):
     for i in range(len(carrito)):
         print(f"{carrito[i]} - ${precios[i]}")
         print(f"\nTotal a pagar: ${sum(precios):.2f}")
-
 
 elif(opcion == 26) :  
 
@@ -418,7 +408,6 @@ elif(opcion == 27) :
         else:
             print("Opción inválida.")
 
-
 elif(opcion == 28) :
     
     def sumar(a, b): return a + b
@@ -434,8 +423,8 @@ elif(opcion == 28) :
             print("Saliendo de la calculadora.")
             break
 
-        a = float(input("Primer número: "))
-        b = float(input("Segundo número: "))
+        a = int(input("Primer número: "))
+        b = int(input("Segundo número: "))
 
         if op == "1": print("Resultado:", sumar(a, b))
         elif op == "2": print("Resultado:", restar(a, b))
